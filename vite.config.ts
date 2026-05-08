@@ -5,10 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    // IMPORTANTE: Use exatamente o nome da pasta do seu repositório no GitHub
-    // Se no GitHub estiver com traço (controle-gre), use /controle-gre/
-    // Se estiver com underline (controle_gre), use /controle_gre/
-    base: '/controle-gre/', 
+    base: '/controle-gre/', // DEVE ser exatamente o nome do repositório entre barras
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
